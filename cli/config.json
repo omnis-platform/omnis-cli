@@ -1,0 +1,5 @@
+{
+  "packageManeger": "yarn",
+  "packageName": "git+ssh://git@gitlab.com:igorbezsmertnyi/omnis.git#master",
+  "packageNameNode": "git+ssh://git@gitlab.com:igorbezsmertnyi/omnis-node.git#master"
+}
