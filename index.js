@@ -10,9 +10,8 @@ const status = require('./cli/status')
 program
   .command('init')
   .alias('i')
-  .arguments('<option>')
   .description('init omnis project')
-  .action(option => init(option))
+  .action(() => init())
 
 program
   .command('version')
