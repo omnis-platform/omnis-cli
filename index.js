@@ -5,6 +5,7 @@ const version = require('./cli/version')
 const help = require('./cli/help')
 const config = require('./cli/config')
 const activate = require('./cli/activate')
+const deactivate = require('./cli/deactivate')
 const status = require('./cli/status')
 
 program
@@ -35,8 +36,14 @@ program
 program
   .command('activate')
   .alias('a')
-  .description('activate omnis project')
+  .description('activate omnis application')
   .action(() => activate())
+
+program
+  .command('deactivate')
+  .alias('d')
+  .description('deactivate omnis application')
+  .action(() => deactivate())
 
 program
   .command('status')

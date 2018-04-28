@@ -4,7 +4,7 @@ const fetch = require('node-fetch')
 const chalk = require('chalk')
 
 const makeRequest = (appName, token) => {
-  fetch(`https://cloud.omnis-platform.com/api/service/application/${appName}/activate_application`, { 
+  fetch(`https://cloud.omnis-platform.com/api/service/application/${appName}/disactivate_application`, { 
     method: 'PATCH', 
     mode: 'cors',
     headers: {
@@ -16,7 +16,7 @@ const makeRequest = (appName, token) => {
     }
   })
   .then(res => res.json())
-  .then(() => console.log(chalk.cyan('Application succesfully activated')))
+  .then(() => console.log(chalk.cyan('Application succesfully disactivated')))
   .catch(err => console.log(chalk.red(`Exited with error ${err}`)))
 }
 
@@ -31,7 +31,7 @@ const generateAuthHeader = () => {
   }
 }
 
-const activate = () => {
+const disactivate = () => {
   if (fs.existsSync(path.join(process.cwd(), 'omnis.json'))) {
     generateAuthHeader()
   } else {
@@ -39,4 +39,4 @@ const activate = () => {
   }
 }
 
-module.exports = activate
+module.exports = disactivate

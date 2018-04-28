@@ -10,13 +10,14 @@ const figlet = require('figlet')
 const omnisJson = { info: 'Generate config file on application settings page' }
 const packageManeger = configJson.packageManeger
 const packegeName = configJson.packageName
-const installCmd = packageManeger === 'npm' ? 'install -s' : 'add'
+const installCmd = packageManeger === 'npm' ? 'install' : 'add'
+const installOpt = packageManeger === 'npm' ? '--save' : ''
 
 const install = () => {
   spinner.start()
 
   return new Promise((resolve, reject) => {
-    const inst = spawn(packageManeger, [installCmd, packegeName])
+    const inst = spawn(packageManeger, [installCmd, packegeName, installOpt])
     const cd = spawn('cd', [process.cwd()])
   
     cd
@@ -42,6 +43,7 @@ const generate = () => {
 
 const init = () => {
   console.log(chalk.cyan(figlet.textSync('Omnis CLI')))
+  console.log(chalk.cyan('Visit https://omnis-platform.com to learn more about Omnis Platform'))
   console.log(chalk.cyan('Initialize Omnis project'))
 
   install()

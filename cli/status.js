@@ -4,7 +4,7 @@ const fetch = require('node-fetch')
 const chalk = require('chalk')
 
 const makeRequest = (appName, token) => {
-  fetch(`https://omnis-platform.com/api/service/application/${appName}/application_status`, { 
+  fetch(`https://cloud.omnis-platform.com/api/service/application/${appName}/application_status`, { 
     method: 'GET', 
     mode: 'cors',
     headers: {
@@ -16,7 +16,7 @@ const makeRequest = (appName, token) => {
     }
   })
   .then(res => res.json())
-  .then(res => console.log(chalk.cyan(`Application status ${res.status}`)))
+  .then(res => console.log(chalk.cyan(`Application actication status ${res.body}`)))
   .catch(err => console.log(chalk.red(`Exited with error ${err}`)))
 }
 
