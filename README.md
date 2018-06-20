@@ -1,5 +1,7 @@
 # Omnis-CLI
 node module for integration with [Omnis Platform](https://omnis-platform.com)
+omnis-cli [npm](https://www.npmjs.com/package/omnis-cli)
+omnis [npm](https://www.npmjs.com/package/omnis)
 
 ---
 
