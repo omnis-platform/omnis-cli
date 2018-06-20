@@ -1,1 +1,4 @@
-{"packageManeger":"yarn","packageName":"git+https://<zzw64byqoyWVRqufm6J_>:x-oauth-basic@gitlab.com/igorbezsmertnyi/omnis.git"}
+{
+  "packageManeger":"npm",
+  "packageName":"omnis"
+}

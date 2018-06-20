@@ -29,14 +29,12 @@
     "url": "https://gitlab.com/igorbezsmertnyi/omnis-cli/issues"
   },
   "homepage": "https://gitlab.com/igorbezsmertnyi/omnis-cli#README",
-  "private": true,
   "dependencies": {
     "chalk": "^2.3.0",
     "cli-spinner": "^0.2.7",
     "commander": "^2.12.2",
     "figlet": "^1.2.0",
     "fs-extra": "^5.0.0",
-    "node-fetch": "^1.7.3",
-    "private-repo": "git+ssh://git@gitlab.com:igorbezsmertnyi/omnis-cli.git#master"
+    "node-fetch": "^1.7.3"
   }
 }
